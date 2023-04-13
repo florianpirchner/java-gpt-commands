@@ -45,7 +45,7 @@ public class Prompter implements IPrompter {
 	@Override
 	public ICommand findCommand(String commandString, Supplier<List<? extends ICommand>> commands) {
 		String unwrappedCommandString = unwrapRawCommand(commandString);
-		if (unwrappedCommandString.isBlank()) {
+		if (unwrappedCommandString.isEmpty()) {
 			return createErrorCommand("No response");
 		}
 

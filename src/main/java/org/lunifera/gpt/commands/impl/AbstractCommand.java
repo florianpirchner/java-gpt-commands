@@ -24,7 +24,7 @@ public abstract class AbstractCommand implements ICommand {
 		StringBuilder sb = new StringBuilder();
 		sb.append(wrapper.wrapCommand(name));
 
-		if (hints != null && !hints.isBlank()) {
+		if (hints != null && !hints.isEmpty()) {
 			sb.append(" - ");
 			sb.append(hints);
 		}
