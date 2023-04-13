@@ -73,7 +73,8 @@ public class CommandTest {
 In the terminal, navigate to the project directory and run the following command:
 
 ```
-mvn clean install
+mvn clean install -DOPENAI_KEY={YOUR_KEY}
 ```
+
 
 This will build the project using Maven and create a `target` folder containing the generated artifacts.
