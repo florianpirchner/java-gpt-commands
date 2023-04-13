@@ -166,6 +166,7 @@ and you must only provide the {COMMAND} as your response.
 
 **Thats it. 14 lines of natural language to do all the magic!**
 
+See https://github.com/florianpirchner/java-gpt-commands/blob/main/src/main/java/org/lunifera/gpt/commands/api/IPrompter.java as the default system-prompt.
 
 
 ## How to build with Maven
