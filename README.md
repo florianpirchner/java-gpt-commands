@@ -4,6 +4,14 @@ This project utilizes GPT-4 to generate commands that are defined in Java, based
 
 To create classifiers that GPT-4 can efficiently process internally, a brief description of the command, consisting of 3-4 words, is sufficient. However, to aid GPT-4 in the decision-making process, these hints can be made as complex as desired.
 
+The implementation has been meticulously crafted to offer optimal default configurations for Java developers, while simultaneously allowing the flexibility to substitute or override these with custom solutions as needed.
+
+To ensure seamless extensibility, we have declared attributes as protected wherever it is logical to do so. Furthermore, our approach predominantly relies on interface-based references to promote adaptability.
+
+We encourage the Java developer community to unleash their creativity by building their own frameworks based on this foundation.
+
+Your valuable contributions through pull requests are always appreciated and welcomed.
+
 ## Sample Command
 
 ```java
