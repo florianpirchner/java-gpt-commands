@@ -38,25 +38,27 @@ public class CommandTest {
 	@Test
 	public void test() {
 		CommandApi api = new CommandApi(OPENAI_KEY);
+		
+		// now create a list of commands and register them at the api
 		api.setCommands(this::createCommands);
 
-		// Ask your boss
+		// Expected Command: Ask your boss
 		ICommand command = api.queryCommand("Need more money");
 		assertEquals(AskYourBossCommand.NAME, command.getName());
 		
-		// Do web query
+		// Expected Command: Do web query
 		command = api.queryCommand("Info about quantum physics.");
 		assertEquals(WebSearchCommand.NAME, command.getName());
 		
-		// As friends
+		// Expected Command: Ask your friends
 		command = api.queryCommand("I need some one to talk.");
 		assertEquals(AskYourFriendsCommand.NAME, command.getName());
 		
-		// Also ask friends
+		// Expected Command: Ask your friends
 		command = api.queryCommand("My friend is physicist. I need some info about quantum physics.");
 		assertEquals(AskYourFriendsCommand.NAME, command.getName());
 		
-		// Ask you doctor
+		// Expected Command: Ask you doctor
 		command = api.queryCommand("My head feels hot");
 		assertEquals(AskYourDoctorCommand.NAME, command.getName());
 	}
