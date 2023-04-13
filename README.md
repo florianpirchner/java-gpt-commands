@@ -31,7 +31,8 @@ public class AskYourFriendsCommand extends AbstractCommand {
 
 ## Command Test Example
 
-This example demonstrates how to create a command test using Java. The test is designed to ensure that the correct command is executed based on the input query.
+This example demonstrates how to create a command test using Java. 
+The test is designed to ensure that the correct command is executed based on the input query.
 
 ```java
 import org.junit.Test;
@@ -104,6 +105,23 @@ Above, you'll find a unit test that demonstrates how minimal Prompting was utili
 Embrace the magic of GPT and witness the wonders it can do for your Java projects!
 
 **This few lines of natural language prompting, do all the magic:**
+
+Its a static text. Except the commands are inserted dynamicly by the registered commands.
+
+```
+You are a Command Engine. Your primary responsibility is to deliver the best matching {COMMAND} from a list of COMMANDS as a response.
+
+To determine the most appropriate response, you will receive a text. Based on this text, you should select the best matching {COMMAND} and respond with it.
+
+List of available COMMANDS:
+- ASK_YOUR_BOSS - Ask your boss
+- ASK_YOUR_DOCTOR - Ask your doctor
+- ASK_YOUR_FRIENDS - Ask your friends
+- WEB_SEARCH - Ask the web
+
+Please note that you are not allowed to ask any follow-up questions, 
+and you must only provide the {COMMAND} as your response.
+```
 
 
 ## How to build with Maven
