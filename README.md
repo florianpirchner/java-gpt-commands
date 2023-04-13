@@ -51,11 +51,14 @@ if(command.getName().equals(AskYourDoctorCommand.NAME)) {
 }
 ```
 
-This code is like a helpful robot that can understand and do different tasks. First, it connects to a smart computer system called GPT-4 using a special key. Then, it tells GPT-4 all the tasks it knows how to do, which are called "commands."
+This code is like a helpful robot that can understand and do different tasks. First, it connects to a smart computer system called GPT-4 using the OpenAI Bearer Token (simply called OpenAI Key). Then, it tells GPT-4 all the tasks it knows how to do, which are called "commands."
 
 Next, it asks GPT-4 for help with a specific task, like finding "Info about quantum physics." GPT-4 will tell the robot which command to use for this task.
 
 If GPT-4 says the best way to get this information is to "Ask Your Doctor," the robot will prepare an email to send to a doctor's email address. But if GPT-4 says the best way is to search the internet, the robot will open the Chrome browser and search for "Info about quantum physics" online.
+
+**Attention:**
+You can utilize this framework to enable a user to write emails or open a browser. In case you have successfully implemented these features, I would be more than happy to accept a pull request from you. Please note that the existing framework is merely a basic implementation and the commands are exclusively designed for unit testing purposes.
 
 
 ## Current CommandApi UnitTests
@@ -124,7 +127,7 @@ This test class has two main components:
 2. `createCommands()`: This method creates and returns a list of commands that will be registered at the `CommandApi`.
 
 
-## A Magical Experience with GPT for Java Developers**
+## The magic about prompting
 
 For Java developers who have never ventured into the realm of GPT (Generative Pre-trained Transformer), it might seem like sorcery at first glance. One might ponder about the complexity and the thousands of lines of code required to implement such logic.
 
@@ -138,14 +141,16 @@ Above, you'll find a unit test that demonstrates how minimal Prompting was utili
 
 Embrace the magic of GPT and witness the wonders it can do for your Java projects!
 
-**This few lines of natural language prompting, do all the magic:**
+**These few lines of natural language prompting, do all the magic, to let the UnitTests you found above become green:**
 
 Its a static text. Except the commands are inserted dynamicly by the registered commands.
 
 ```
-You are a Command Engine. Your primary responsibility is to deliver the best matching {COMMAND} from a list of COMMANDS as a response.
+You are a Command Engine. 
+Your primary responsibility is to deliver the best matching {COMMAND} from a list of COMMANDS as a response.
 
-To determine the most appropriate response, you will receive a text. Based on this text, you should select the best matching {COMMAND} and respond with it.
+To determine the most appropriate response, you will receive a text. 
+Based on this text, you should select the best matching {COMMAND} and respond with it.
 
 List of available COMMANDS:
 - ASK_YOUR_BOSS - Ask your boss
@@ -157,6 +162,7 @@ Please note that you are not allowed to ask any follow-up questions,
 and you must only provide the {COMMAND} as your response.
 ```
 
+**Thats it. 14 lines of natural language to do all the magic!**
 
 ## How to build with Maven
 
