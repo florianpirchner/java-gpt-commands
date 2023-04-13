@@ -1,7 +1,7 @@
 package org.lunifera.gpt.commands.impl;
 
 import org.lunifera.gpt.commands.api.ICommand;
-import org.lunifera.gpt.commands.api.IPrompter.CommandWrapper;
+import org.lunifera.gpt.commands.api.ICommandWrapper;
 
 public abstract class AbstractCommand implements ICommand {
 
@@ -20,7 +20,7 @@ public abstract class AbstractCommand implements ICommand {
 	}
 
 	@Override
-	public String toPrompt(CommandWrapper wrapper) {
+	public String toPrompt(ICommandWrapper wrapper) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(wrapper.wrapCommand(name));
 

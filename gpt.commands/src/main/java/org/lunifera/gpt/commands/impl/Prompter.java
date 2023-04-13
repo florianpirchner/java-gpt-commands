@@ -5,12 +5,13 @@ import java.util.function.Supplier;
 
 import org.lunifera.gpt.commands.api.ErrorCommand;
 import org.lunifera.gpt.commands.api.ICommand;
+import org.lunifera.gpt.commands.api.ICommandWrapper;
 import org.lunifera.gpt.commands.api.IPrompter;
 import org.lunifera.gpt.commands.api.InvalidCommand;
 
 public class Prompter implements IPrompter {
 
-	private IPrompter.CommandWrapper commandWrapper = IPrompter.CommandWrapper.DEFAULT;
+	private ICommandWrapper commandWrapper = ICommandWrapper.DEFAULT;
 
 	@Override
 	public String getSystemPrompt(Supplier<List<? extends ICommand>> commands) {
@@ -21,7 +22,7 @@ public class Prompter implements IPrompter {
 	}
 
 	@Override
-	public void setCommandWrapper(CommandWrapper commandWrapper) {
+	public void setCommandWrapper(ICommandWrapper commandWrapper) {
 		this.commandWrapper = commandWrapper;
 	}
 
@@ -35,7 +36,7 @@ public class Prompter implements IPrompter {
 		StringBuilder sb = new StringBuilder();
 		commands.get().forEach(c -> {
 			sb.append("- ");
-			sb.append(c.toPrompt(IPrompter.CommandWrapper.DEFAULT));
+			sb.append(c.toPrompt(ICommandWrapper.DEFAULT));
 			sb.append("\n");
 		});
 		return sb.toString();

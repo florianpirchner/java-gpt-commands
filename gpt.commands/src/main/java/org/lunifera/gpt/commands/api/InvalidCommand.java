@@ -1,7 +1,5 @@
 package org.lunifera.gpt.commands.api;
 
-import org.lunifera.gpt.commands.api.IPrompter.CommandWrapper;
-
 public class InvalidCommand implements ICommand {
 
 	@Override
@@ -10,7 +8,7 @@ public class InvalidCommand implements ICommand {
 	}
 
 	@Override
-	public String toPrompt(CommandWrapper delimiter) {
+	public String toPrompt(ICommandWrapper delimiter) {
 		throw new UnsupportedOperationException();
 	}
 

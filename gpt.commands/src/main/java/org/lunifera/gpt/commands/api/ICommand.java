@@ -1,7 +1,5 @@
 package org.lunifera.gpt.commands.api;
 
-import org.lunifera.gpt.commands.api.IPrompter.CommandWrapper;
-
 /**
  * A command is responsible, to provide the {@link IPrompter} with required
  * information, to integrate the commands properly into the prompt.
@@ -27,6 +25,6 @@ public interface ICommand {
 	 * 
 	 * @return
 	 */
-	String toPrompt(CommandWrapper wrapper);
+	String toPrompt(ICommandWrapper wrapper);
 
 }

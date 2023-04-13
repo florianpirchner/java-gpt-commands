@@ -28,8 +28,7 @@ public interface IPrompter {
 					+ "COMMANDS:\n" //
 					+ "{___COMMAND_LIST___}" //
 					+ "\n" //
-					+ "You will never ask a follow-up question!\n"
-					+ "\n" //
+					+ "You will never ask a follow-up question!\n" + "\n" //
 					+ "And you MUST only answer the {COMMAND}!"; //
 
 	/**
@@ -37,9 +36,9 @@ public interface IPrompter {
 	 * 
 	 * @return
 	 */
-	default String getDefaultSystemPromptTemplate(CommandWrapper delimiter) {
-		return DEFAULT_SYSTEM_PROMPT.replaceAll(PREFIX_TEMPLATE, delimiter.preFix)//
-				.replaceAll(POSTFIX_TEMPLATE, delimiter.postFix);
+	default String getDefaultSystemPromptTemplate(ICommandWrapper delimiter) {
+		return DEFAULT_SYSTEM_PROMPT.replaceAll(PREFIX_TEMPLATE, delimiter.getPrefix())//
+				.replaceAll(POSTFIX_TEMPLATE, delimiter.getPostfix());
 	}
 
 	/**
@@ -62,65 +61,19 @@ public interface IPrompter {
 	ICommand findCommand(String commandString, Supplier<List<? extends ICommand>> commands);
 
 	/**
-	 * Sets the command delimiter. See {@link CommandWrapper}.
+	 * Sets the command delimiter. See {@link ICommandWrapper}.
 	 * 
-	 * @param delimiter
+	 * @param wrapper
 	 */
-	void setCommandWrapper(CommandWrapper delimiter);
+	void setCommandWrapper(ICommandWrapper wrapper);
 
 	/**
-	 * Returns the command delimiter. See {@link CommandWrapper}.
+	 * Returns the command delimiter. See {@link ICommandWrapper}.
 	 * 
 	 * @return
 	 */
-	default CommandWrapper getCommandWrapper() {
-		return CommandWrapper.DEFAULT;
+	default ICommandWrapper getCommandWrapper() {
+		return ICommandWrapper.DEFAULT;
 	}
 
-	/**
-	 * Describes how to wrap the command. By default, the command will be wrapped
-	 * following the format "{%s}". This is required, to ensure that gpt-4 can
-	 * recognize the raw command part properly.
-	 * <p>
-	 * Eg: {SEARCH_WEB} - in cases you need more information.
-	 */
-	public static class CommandWrapper {
-
-		public static final CommandWrapper DEFAULT = new CommandWrapper("{", "}");
-
-		public final String preFix;
-		public final String postFix;
-
-		public CommandWrapper(String preFix, String postFix) {
-			super();
-			this.preFix = preFix;
-			this.postFix = postFix;
-		}
-
-		public String wrapCommand(String command) {
-			if (preFix == null) {
-				return command;
-			}
-
-			return preFix + command + postFix;
-		}
-
-		public String unwrapCommand(String wrappedCommand) {
-			if (preFix == null) {
-				return wrappedCommand;
-			}
-			String command = wrappedCommand.trim();
-
-			if (wrappedCommand.startsWith(preFix)) {
-				command = wrappedCommand.substring(1, wrappedCommand.length());
-			}
-
-			if (command.endsWith(postFix)) {
-				command = command.substring(0, command.length() - 1);
-			}
-
-			return command;
-		}
-
-	}
 }
