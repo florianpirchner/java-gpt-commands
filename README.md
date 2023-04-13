@@ -45,6 +45,7 @@ ICommand command = api.queryCommand("Info about quantum physics");
 // if ask the doctor, then schedule meeting
 if(command.getName().equals(AskYourDoctorCommand.NAME)) {
 	prepareMail("doctor@doctor.com");
+// if ask the web, then open the Chrome browser and pass the user question
 } else if(command.getName().equals(WebSearchCommand.NAME)) {
 	openChromeNow("Info about quantum physics");
 }
