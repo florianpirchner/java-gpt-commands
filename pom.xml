@@ -19,4 +19,18 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version> <!-- use the latest version of the plugin -->
+				<configuration>
+					<source>1.8</source> <!-- update this to the desired Java version -->
+					<target>1.8</target> <!-- update this to the desired Java version -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
