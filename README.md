@@ -14,6 +14,8 @@ Your valuable contributions through pull requests are always appreciated and wel
 
 ## Sample Command
 
+In the system prompt this command will be represented as ```- {ASK_YOUR_FRIENDS} - Ask your friends```
+
 ```java
 public class AskYourFriendsCommand extends AbstractCommand {
 
