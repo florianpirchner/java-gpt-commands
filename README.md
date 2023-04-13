@@ -14,7 +14,7 @@ Your valuable contributions through pull requests are always appreciated and wel
 
 ## Ask your friends
 
-To tell GPT-4, that there is a choice to select "Ask your friends". It is that easy.
+To tell GPT-4, that there is a choice to select "Ask your friends". It is that simple.
 
 ```java
 public class AskYourFriendsCommand extends AbstractCommand {
@@ -29,9 +29,32 @@ public class AskYourFriendsCommand extends AbstractCommand {
 }
 ```
 
-## Command Test Example
+## CommandApi
+The CommandApi is your entry point to the functionality. It is highly configurable.
 
-This example demonstrates how to create a command test using Java. 
+```
+// create a new intance with the GPT-4 OPENAI_KEY
+CommandApi api = new CommandApi(OPENAI_KEY);
+
+// you need to register all commands, GPT-4 should be aware of.
+api.setCommands(myCommands);
+
+// and now you can query for commands
+ICommand command = api.queryCommand("Info about quantum physics");
+
+// if ask the doctor, then schedule meeting
+if(command.getName().equals(AskYourDoctorCommand.NAME)) {
+	prepareMail("doctor@doctor.com");
+} else if(command.getName().equals(WebSearchCommand.NAME)) {
+	openChromeNow("Info about quantum physics");
+}
+```
+
+
+## Current CommandApi UnitTests
+
+This example demonstrates how to use the framework to query for the best command. Therefore we are using JUnit, since it is a well known framework to java developers.
+
 The test is designed to ensure that the correct command is executed based on the input query.
 
 ```java
@@ -45,6 +68,10 @@ public class CommandTest {
         CommandApi api = new CommandApi(OPENAI_KEY);
         
         // Register commands at the API
+		// AskYourBossCommand
+		// AskYourFriendsCommand
+		// AskYourDoctorCommand
+		// WebSearchCommand
         api.setCommands(this::createCommands);
 
         // Test different queries and their expected commands
