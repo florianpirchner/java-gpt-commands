@@ -33,7 +33,7 @@ public class AskYourFriendsCommand extends AbstractCommand {
 The CommandApi is your entry point to the functionality. It is highly configurable.
 
 ```
-// create a new intance with the GPT-4 OPENAI_KEY
+// create a new instance with the GPT-4 OPENAI_KEY
 CommandApi api = new CommandApi(OPENAI_KEY);
 
 // you need to register all commands, GPT-4 should be aware of.
