@@ -12,9 +12,9 @@ We encourage the Java developer community to unleash their creativity by buildin
 
 Your valuable contributions through pull requests are always appreciated and welcomed.
 
-## Sample Command
+## Ask your friends
 
-In the system prompt this command will be represented as ```- {ASK_YOUR_FRIENDS} - Ask your friends```
+To tell GPT-4, that there is a choice to select "Ask your friends". It is that easy.
 
 ```java
 public class AskYourFriendsCommand extends AbstractCommand {
