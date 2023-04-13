@@ -89,6 +89,21 @@ This test class has two main components:
 2. `createCommands()`: This method creates and returns a list of commands that will be registered at the `CommandApi`.
 
 
+## A Magical Experience with GPT for Java Developers**
+
+For Java developers who have never ventured into the realm of GPT (Generative Pre-trained Transformer), it might seem like sorcery at first glance. One might ponder about the complexity and the thousands of lines of code required to implement such logic.
+
+As Java enthusiasts, we are accustomed to crafting our logic in Java. However, GPT has heralded a new age of programming. Programming GPT is no longer referred to as "programming" but rather as "Prompting".
+
+In the world of GPT, we employ our natural language to communicate with the transformer. Our goal is to provide GPT with the bare minimum of information. Feeding GPT just the ABSOLUTE ESSENTIALS is crucial as providing excessive information acts as a constraint, limiting GPT's ability to harness its high abstraction capabilities.
+
+When it comes to Prompting (GPT programming), less is indeed more!
+
+Above, you'll find a unit test that demonstrates how minimal Prompting was utilized to implement this project using GPT-4. Achieving the same results with GPT-3.5 would have required a substantially greater Prompting effort. 
+
+Embrace the magic of GPT and witness the wonders it can do for your Java projects!
+
+**This few lines of natural language prompting, do all the magic:**
 
 
 ## How to build with Maven
