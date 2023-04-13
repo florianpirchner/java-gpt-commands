@@ -29,7 +29,9 @@ public class AskYourFriendsCommand extends AbstractCommand {
 }
 ```
 
-## Usage Example
+## Command Test Example
+
+This example demonstrates how to create a command test using Java. The test is designed to ensure that the correct command is executed based on the input query.
 
 ```java
 import org.junit.Test;
@@ -37,48 +39,47 @@ import org.junit.Test;
 
 public class CommandTest {
 
-	@Test
-	public void test() {
-		CommandApi api = new CommandApi(OPENAI_KEY);
-		
-		// now create a list of commands and register them at the api
-		api.setCommands(this::createCommands);
+    @Test
+    public void testCommandExecution() {
+        CommandApi api = new CommandApi(OPENAI_KEY);
+        
+        // Register commands at the API
+        api.setCommands(this::createCommands);
 
-		// Expected Command: Ask your boss
-		ICommand command = api.queryCommand("Need more money");
-		assertEquals(AskYourBossCommand.NAME, command.getName());
-		
-		// Expected Command: Do web query
-		command = api.queryCommand("Info about quantum physics.");
-		assertEquals(WebSearchCommand.NAME, command.getName());
-		
-		// Expected Command: Ask your friends
-		command = api.queryCommand("I need some one to talk.");
-		assertEquals(AskYourFriendsCommand.NAME, command.getName());
-		
-		// Expected Command: Ask your friends
-		command = api.queryCommand("My friend is physicist. I need some info about quantum physics.");
-		assertEquals(AskYourFriendsCommand.NAME, command.getName());
-		
-		// Expected Command: Ask you doctor
-		command = api.queryCommand("My head feels hot");
-		assertEquals(AskYourDoctorCommand.NAME, command.getName());
-	}
+        // Test different queries and their expected commands
+        testCommand(api, "Need more money", AskYourBossCommand.NAME);
+        testCommand(api, "Info about quantum physics.", WebSearchCommand.NAME);
+        testCommand(api, "I need some one to talk.", AskYourFriendsCommand.NAME);
+        testCommand(api, "My friend is physicist. I need some info about quantum physics.", AskYourFriendsCommand.NAME);
+        testCommand(api, "My head feels hot", AskYourDoctorCommand.NAME);
+    }
 
-	/**
-	 * Create the list of commands.
-	 * @return
-	 */
-	private List<ICommand> createCommands() {
-		List<ICommand> commands = new ArrayList<>();
-		commands.add(new AskYourBossCommand());
-		commands.add(new AskYourFriendsCommand());
-		commands.add(new AskYourDoctorCommand());
-		commands.add(new WebSearchCommand());
-		return commands;
-	}
+    private void testCommand(CommandApi api, String query, String expectedCommandName) {
+        ICommand command = api.queryCommand(query);
+        assertEquals(expectedCommandName, command.getName());
+    }
+
+    /**
+     * Creates and returns a list of commands.
+     */
+    private List<ICommand> createCommands() {
+        List<ICommand> commands = new ArrayList<>();
+        commands.add(new AskYourBossCommand());
+        commands.add(new AskYourFriendsCommand());
+        commands.add(new AskYourDoctorCommand());
+        commands.add(new WebSearchCommand());
+        return commands;
+    }
 }
 ```
+
+This test class has two main components:
+
+1. `testCommandExecution()`: This method sets up the `CommandApi` and tests different queries to ensure the correct command is being executed.
+2. `createCommands()`: This method creates and returns a list of commands that will be registered at the `CommandApi`.
+
+
+
 
 ## How to build with Maven
 
