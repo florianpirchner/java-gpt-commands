@@ -145,7 +145,7 @@ Embrace the magic of GPT and witness the wonders it can do for your Java project
 
 **The simple prompt in natural language following has the ability to work wonders and turn the UnitTests you discovered earlier into a green state:**
 
-_Its a static text. Except the commands are inserted dynamicly by the registered commands._
+_The text itself is static, but the commands are dynamically inserted by registered commands._
 
 ```
 You are a Command Engine. 
