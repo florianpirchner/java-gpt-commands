@@ -170,6 +170,31 @@ and you must only provide the {COMMAND} as your response.
 
 See https://github.com/florianpirchner/java-gpt-commands/blob/main/src/main/java/org/lunifera/gpt/commands/api/IPrompter.java as the default system-prompt.
 
+## Putting GPT-4 into a cage
+As previously discussed, it is advisable to provide GPT-4 with minimal information. The more data you supply, the more you establish the context in which GPT can function. Each input on GPT serves as a constraint, restricting GPT's capacity to generalize.
+
+A discerning reader of the prompts in "The Art of Prompting" may have observed a contradiction at this point.
+
+I initially asserted that "less is more" when it comes to prompting.
+
+It seems that I am contradicting myself. On one hand, I argue that GPT-4 should not be swayed by overly potent prompts.
+
+Yet in the subsequent system prompt, I outline specific objectives:
+- you are a Command Engine
+- your primary duty is to generate the most suitable {COMMAND} from a list of COMMANDS as a response
+- be aware that you are not permitted to ask any follow-up questions
+- and your response must solely consist of the {COMMAND}
+
+By doing this, I am restricting GPT-4's autonomy. I am imposing well-defined constraints on GPT-4. Essentially, I am confining GPT-4 within a framework.
+
+But here's the caveat!
+
+Nevertheless, I did not inhibit GPT-4 from utilizing its generalization capabilities to identify the optimal variation of the commands.
+
+I merely confined GPT-4 within a framework. This framework delineates the boundaries in which GPT-4 is allowed to operate.
+
+In human terms, this would be analogous to hypnosis—a strikingly similar concept.
+
 
 ## How to build with Maven
 
