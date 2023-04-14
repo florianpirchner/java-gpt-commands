@@ -164,7 +164,7 @@ Please note that you are not allowed to ask any follow-up questions,
 and you must only provide the {COMMAND} as your response.
 ```
 
-**Thats it. 14 lines of natural language do all the magic!**
+**That's all it takes - 14 lines of natural language to work wonders!**
 
 See https://github.com/florianpirchner/java-gpt-commands/blob/main/src/main/java/org/lunifera/gpt/commands/api/IPrompter.java as the default system-prompt.
 
