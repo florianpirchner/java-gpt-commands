@@ -30,7 +30,7 @@ public class AskYourFriendsCommand extends AbstractCommand {
 ```
 
 ## CommandApi
-The CommandApi is your entry point to the functionality. It is highly configurable.
+The CommandApi serves as your gateway to the available features and is easily customizable
 
 ```
 // create a new instance with the GPT-4 OPENAI_KEY
