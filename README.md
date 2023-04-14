@@ -2,7 +2,7 @@
 
 This project utilizes GPT-4 to generate commands that are defined in Java, based on user input. GPT-4 determines the most suitable command and returns the corresponding Java command.
 
-If you are not familiar with GPT, read the subsection in this document "[magic about prompting"](#the_magic_about_prompting) first.
+If you are not familiar with GPT, read the subsection in this document "[magic about prompting"](#the_magic_about_prompting) first. (Link not working right now. Just scroll down.)
 
 To create classifiers that GPT-4 can efficiently process internally, a brief description of the command, consisting of 3-4 words, is sufficient. However, to aid GPT-4 in the decision-making process, the hints can be made as complex as desired.
 
@@ -131,7 +131,7 @@ This test class has two main components:
 2. `createCommands()`: This method creates and returns a list of commands that will be registered at the `CommandApi`.
 
 
-## The magic about prompting {#the_magic_about_prompting}
+## The magic about prompting
 
 For Java developers who have never ventured into the realm of GPT (Generative Pre-trained Transformer), it might seem like sorcery at first glance. One might ponder about the complexity and the thousands of lines of code required to implement such logic.
 
