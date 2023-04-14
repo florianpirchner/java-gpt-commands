@@ -14,7 +14,7 @@ Your valuable contributions through pull requests are always appreciated and wel
 
 ## Ask your friends
 
-To tell GPT-4, that there is a choice to select "Ask your friends". It is that simple.
+It's as easy as selecting "Ask your friends" to inform GPT-4 of the available option. 
 
 ```java
 public class AskYourFriendsCommand extends AbstractCommand {
