@@ -143,7 +143,7 @@ Above, you saw a unit test that demonstrates how minimal prompting was utilized 
 
 Embrace the magic of GPT and witness the wonders it can do for your Java projects!
 
-**These few lines of natural language prompting, do all the magic, to let the UnitTests you found above become green:**
+**These simple prompts in natural language have the ability to work wonders and turn the UnitTests you discovered earlier into a green state.**
 
 _Its a static text. Except the commands are inserted dynamicly by the registered commands._
 
