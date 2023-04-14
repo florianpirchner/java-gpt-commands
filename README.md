@@ -173,7 +173,7 @@ See https://github.com/florianpirchner/java-gpt-commands/blob/main/src/main/java
 ## Putting GPT-4 into a cage
 As previously discussed, it is advisable to provide GPT-4 with minimal information. The more data you supply, the more you establish the context in which GPT can function. Each input on GPT serves as a constraint, restricting GPT's capacity to generalize.
 
-A discerning reader of the prompts in "The Art of Prompting" may have observed a contradiction at this point.
+A discerning reader of the prompts in "[magic about prompting"](#the_magic_about_prompting) may have observed a contradiction at this point.
 
 I initially asserted that "less is more" when it comes to prompting.
 
