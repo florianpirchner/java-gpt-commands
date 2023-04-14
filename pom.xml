@@ -5,17 +5,22 @@
 	<groupId>org.lunifera</groupId>
 	<artifactId>gpt.commands</artifactId>
 	<version>0.9.0-SNAPSHOT</version>
+	
+	<properties>
+		<openai-gpt3-java-version>0.12.0</openai-gpt3-java-version>
+		<junit-version>4.13.2</junit-version>
+	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.theokanning.openai-gpt3-java</groupId>
 			<artifactId>service</artifactId>
-			<version>0.12.0</version>
+			<version>${openai-gpt3-java-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>${junit-version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -33,4 +38,20 @@
 			</plugin>
 		</plugins>
 	</build>
+	<url>https://github.com/florianpirchner/java-gpt-commands</url>
+	<name>java-gpt-commands</name>
+	<description>This project utilizes GPT-4 to generate commands that are defined in Java, based on user input. GPT-4 determines the most suitable command and returns the corresponding Java command.</description>
+	<organization>
+		<name>Lunifera.org</name>
+	</organization>
+	<scm>
+		<url>https://github.com/florianpirchner/java-gpt-commands.git</url>
+		<developerConnection>florian.pirchner@gmail.com</developerConnection>
+	</scm>
+	<issueManagement>
+		<url>https://github.com/florianpirchner/java-gpt-commands/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<url>https://github.com/florianpirchner/java-gpt-commands/actions</url>
+	</ciManagement>
 </project>
