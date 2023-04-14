@@ -185,13 +185,13 @@ Yet in the subsequent system prompt, I outline specific objectives:
 - be aware that you are not permitted to ask any follow-up questions
 - and your response must solely consist of the {COMMAND}
 
-By doing this, I am restricting GPT-4's autonomy. I am imposing well-defined constraints on GPT-4. Essentially, I am confining GPT-4 within a framework.
+By doing this, I am restricting GPT-4's autonomy. I am imposing well-defined constraints on GPT-4. Essentially, I am confining GPT-4 within a cage.
 
 But here's the caveat!
 
 Nevertheless, I did not inhibit GPT-4 from utilizing its generalization capabilities to identify the optimal variation of the commands.
 
-I merely confined GPT-4 within a framework. This framework delineates the boundaries in which GPT-4 is allowed to operate.
+I merely confined GPT-4 within a cage. This cage delineates the boundaries in which GPT-4 is allowed to operate.
 
 In human terms, this would be analogous to hypnosis—a strikingly similar concept.
 
