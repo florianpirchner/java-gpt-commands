@@ -16,7 +16,7 @@ public interface IPrompter {
 	public static final String COMMAND_LIST_TEMPLATE = "\\{___COMMAND_LIST___}";
 
 	/**
-	 * Parts of this prompt are copied and modified from "[Auto-GPT"](https://github.com/Torantulino/Auto-GPT).
+	 * Parts of this prompt are copied and/or modified from "[Auto-GPT"](https://github.com/Torantulino/Auto-GPT).
 	 *
 	 * {___PREFIX___}, {___POSTFIX___} and {___COMMAND_LIST___} need to be replaced
 	 * later.
