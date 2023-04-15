@@ -168,7 +168,9 @@ and you must only provide the {COMMAND} as your response.
 
 **That's all it takes - 14 lines of natural language to work wonders!**
 
-See https://github.com/florianpirchner/java-gpt-commands/blob/main/src/main/java/org/lunifera/gpt/commands/api/IPrompter.java as the default system-prompt.
+See [IPrompter](https://github.com/florianpirchner/java-gpt-commands/blob/main/src/main/java/org/lunifera/gpt/commands/api/IPrompter.java) as the default system-prompt.
+
+
 
 ## Putting GPT-4 into a cage
 As previously discussed, it is advisable to provide GPT-4 with minimal information. The more data you supply, the more you establish the context in which GPT can function. Each input on GPT serves as a constraint, restricting GPT's capacity to generalize.
@@ -196,9 +198,11 @@ I merely confined GPT-4 within a cage. This cage delineates the boundaries in wh
 In human terms, this would be analogous to hypnosis—a strikingly similar concept.
 
 ## Credits
-This project was inspired by "[Auto-GPT"](https://github.com/Torantulino/Auto-GPT). By reading the Auto-GPT code i could learn a lot about proper system-prompts. And even how to put GPT-4 into a cage.
+This project was inspired by [Auto-GPT](https://github.com/Torantulino/Auto-GPT). By reading the Auto-GPT code i could learn a lot about proper system-prompts. And even how to put GPT-4 into a cage.
 
 I also used some prompt sentences from there. The parts of prompt related to Auto-GPT are marked properly in my java code to pay credit.
+
+See [IPrompter](https://github.com/florianpirchner/java-gpt-commands/blob/main/src/main/java/org/lunifera/gpt/commands/api/IPrompter.java).
 
 ## How to build with Maven
 
