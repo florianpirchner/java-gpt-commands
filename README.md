@@ -195,6 +195,8 @@ I merely confined GPT-4 within a cage. This cage delineates the boundaries in wh
 
 In human terms, this would be analogous to hypnosis—a strikingly similar concept.
 
+## Credits
+This project was inspired by "[Auto-GPT"](https://github.com/Torantulino/Auto-GPT).
 
 ## How to build with Maven
 
